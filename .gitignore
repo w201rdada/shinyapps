@@ -1,6 +1,5 @@
 #ignore everything
 *
-w201*/.DS_Store
 #except these files
 !.gitignore
 !README.md
@@ -9,3 +8,4 @@ w201*/.DS_Store
 !w201*/data/*
 !w201*/packrat/*
 !w201*/packrat/desc/*
+w201*/.DS_Store
