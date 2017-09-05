@@ -45,7 +45,7 @@ server<-function(input, output) {
 		ck<-uri[input$citekey]
 		ix<-if(is.null(input$freq)) {dtm[ck][.N,freq]} else {input$freq[1]:input$freq[2]}
 		ix<-intersect(ix,dtm[ck,freq]) %>% sort %>% rev
-		p<-dtm[.(ck,ix)]
+		p<-dtm[.(ck,ix)][order(-freq)]
 		wordcloud2(data=p[,.(word,freq)]%>%as.data.frame(),shuffle=F,color = p[,c],size = .5)
 	})
 
